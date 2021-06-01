@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chong chóng quay</title>
+</head>
+<body>
+    <style>
+        header{
+            text-align: center;
+        }
+        img{
+            margin-top: 80px;
+        }
+        button{
+            margin-top: 250px;
+            margin-right: 30px;
+            padding: 10px 25px;
+        }
+
+    </style>
+    <header>
+        <div id="myDiv">
+            <img id="img" src="images/1200px-A_pinwheel.jpg" width="30%" >
+        </div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </header>
+
+    <script>
+        const img = document.querySelector('#img');
+        const start = document.querySelector('#start');
+        const stop = document.querySelector('#stop');
+        let rotate = () => {
+            img.style.transform += 'rotate(20deg)';           
+        }
+        start.onclick = () => {
+            t = setInterval(rotate, 300);
+        }
+        stop.onclick = () => {
+            clearInterval(t);
+        }
+    </script>
+</body>
+</html>

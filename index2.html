@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo gallery</title>	
+	<style type="text/css">
+		.large-img{
+			display: block;
+			width: 608px;
+			clear: both;
+		}
+		.small-img{
+			width:200px;
+			display: inline-block;
+			padding:2px;
+			margin-top:10px;
+		}
+		.faded{
+			opacity: 0.22
+		}
+	</style>
+</head>
+<body>
+<img src="images/Koala.jpg" class="large-img">
+<img src="images/Koala.jpg"class="small-img">
+<img src="images/Lighthouse.jpg" class="small-img faded">
+<img src="images/Tulips.jpg" class="small-img faded">
+
+<script>
+    const large = document.querySelector('.large-img');
+    const small = document.querySelectorAll('.small-img');
+    small.forEach((item) => {
+        item.onclick = () => {
+            large.setAttribute('src', item.getAttribute('src'));
+			
+			}
+        }
+     )
+</script>
+</body>
+</html>
+
+
